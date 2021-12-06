@@ -2,21 +2,22 @@ package com.employee;
 
 import java.util.ArrayList;
 
-public class EmpWageBuilder  {
-
-	public ArrayList<CompanyEmpWage> EmpCollection = new ArrayList<>();
+public class EmpWageBuilder implements EmpWageInterface  {
 
 	
+	public ArrayList<CompanyEmpWage> EmpCollection = new ArrayList<>();
+
+	@Override
 	public ArrayList<CompanyEmpWage> getEmpCollection() {
 		return EmpCollection;
 	}
 
-	
+	@Override
 	public void setEmpCollection(ArrayList<CompanyEmpWage> empCollection) {
 		EmpCollection = empCollection;
 	}
 
-	
+	@Override
 	public void calculate(CompanyEmpWage call, String company, int no_of_days, int max_hrs_in_month, int wages_per_hr) {
 
 		final int PARTTIME = 1;
