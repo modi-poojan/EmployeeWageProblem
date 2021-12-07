@@ -45,7 +45,7 @@ public class CompanyEmpWage {
 
 	@Override
 	public String toString() {
-		return "EmpWageBuilder [Company=" + company + "\tTotalWage=" + totalWage + "]";
+		return "EmpWageBuilder [Company=" + company + "\tTotalWage=" + totalWage + "\t DailyWage " + dailywage +  "]";
 	}
-//
+
 }

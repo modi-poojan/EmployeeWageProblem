@@ -40,9 +40,12 @@ public class Test {
 		obj.setEmpCollection(temp);
 
 		for (CompanyEmpWage i : obj.getEmpCollection()) {
-			System.out.println(i.toString());
+			System.out.println("\n"+i.toString());
 		}
-
+		
+		System.out.println("Enter the Company name for which you want Total Wages\n");
+		String companySearch = input.next();
+		obj.companyTotalWage(companySearch);
 	}
 }
 //

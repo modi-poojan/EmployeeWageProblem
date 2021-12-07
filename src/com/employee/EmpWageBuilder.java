@@ -60,12 +60,23 @@ public class EmpWageBuilder implements EmpWageInterface  {
 		}
 		call.setDailywage(temp);
 		totalwage = hours * wages_per_hr;
-		System.out.println(" Company = " + company);
-		System.out.println(" Total wages earned = " + totalwage);
-		System.out.println(" Total working days = " + days);
-		System.out.println(" Total working hours = " + hours);
+		System.out.println(" \nCompany = " + company);
+		System.out.println(" \nTotal wages earned = " + totalwage);
+		System.out.println(" \nTotal working days = " + days);
+		System.out.println(" \nTotal working hours = " + hours);
 
 		call.setTotalWage(totalwage);
 	}
-//
+	
+	public void companyTotalWage( String company) {
+		
+		for (int i = 0; i< EmpCollection.size(); i++) {
+			String name = EmpCollection.get(i).getCompany();
+			if(name.equals(company)) {
+				int totalWage = EmpCollection.get(i).getTotalWage();
+				System.out.println("Total Wage for Company "+company+" is "+totalWage);
+			}
+		}
+			
+	}
 }
